@@ -1,0 +1,85 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.before {
+  /* height: 100vh;
+    display: flex;
+    align-items: center; */
+}
+.container {
+  width: 90%;
+  max-width: 992px;
+  margin: 0 auto;
+}
+.flex {
+  /* display: flex;
+  align-items: center;
+  justify-content: space-between; */
+
+}
+.before-content-left,
+.before-content-right {
+  width: 50%;
+}
+.before-content-left {
+    margin-bottom: 30px;
+}
+.before-content-left h2 {
+  font-size: 35px;
+  margin-bottom: 20px;
+}
+.before-content-left p {
+  font-size: 18px;
+  margin-bottom: 24px;
+}
+.list ul {
+  list-style-type: none;
+  position: relative;
+  padding-left: 100px;
+  margin-left: 10px;
+  border-left: 2px solid purple;
+}
+/* .list ul::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 10px;
+  width: 2px;
+  height: 100%;
+  background: red;
+} */
+.list ul li {
+  margin-bottom: 75px;
+  position: relative;
+}
+.list ul li::before {
+  content: attr(data-counter);
+  position: absolute;
+  left: -122px;
+  top: 0;
+  width: 40px;
+  height: 40px;
+  border: 1px solid purple;
+  background: #fff;
+  border-radius: 50%;
+  line-height: 40px;
+  text-align: center;
+  transition: all 0.3s ease-in-out;
+}
+.list ul li:hover::before {
+    background: purple;
+    color: #fff;
+}
+
+@media only screen and (min-width:500px) {
+    .flex {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+      .before-content-left {
+        margin-bottom: 0;
+      }
+}
